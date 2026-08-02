@@ -1,0 +1,47 @@
+import React from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+import { Logo } from './Logo';
+
+const LoadingScreen = ({ loading }: { loading: boolean }) => {
+  return (
+    <AnimatePresence>
+      {loading && (
+        <motion.div
+          key="loading-bg"
+          initial={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          className="fixed inset-0 z-[9999] bg-background flex flex-col items-center justify-center gap-2"
+        >
+          <motion.div
+            layoutId="site-logo"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >
+            <Logo className="w-72 h-72 object-contain" />
+          </motion.div>
+          {/* Progress Bar */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+            className="w-48 sm:w-64 h-1.5 bg-surface-gray mt-8 rounded-sm overflow-hidden"
+          >
+            <motion.div
+              initial={{ width: "0%" }}
+              animate={{ width: "100%" }}
+              transition={{ duration: 1.5, ease: "easeInOut" }}
+              className="h-full bg-primary"
+            />
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+};
+
+export default LoadingScreen;
+
+
+

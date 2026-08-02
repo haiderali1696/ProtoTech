@@ -1,0 +1,242 @@
+@theme {
+  /* Fonts */
+  --font-body: var(--theme-font-body);
+  --font-heading: var(--theme-font-heading);
+  --font-sans: var(--theme-font-sans);
+
+  /* Specific palette colors */
+  --color-deep-navy: #0A1F44;
+  --color-bright-cyan: #00C6FF;
+  --color-cool-gray: #F2F4F7;
+  --color-sky-blue: #66BFFF;
+  --color-charcoal: #333333;
+
+  /* Brand / Primary */
+  --color-primary: var(--theme-primary);
+  --color-primary-foreground: var(--theme-primary-foreground);
+  --color-accent: var(--theme-accent);
+  --color-accent-foreground: var(--theme-accent-foreground);
+
+  /* Backgrounds & surfaces */
+  --color-background: var(--theme-background);
+  --color-foreground: var(--theme-foreground);
+
+  --color-surface-dark: var(--theme-surface-dark);
+  --color-surface-darker: var(--theme-surface-darker);
+  --color-surface-gray: var(--theme-surface-gray);
+  --color-surface-light: var(--theme-surface-light);
+
+  /* Cards & containers */
+  --color-card: var(--theme-card);
+  --color-card-foreground: var(--theme-card-foreground);
+
+  --color-surface-container-lowest: var(--theme-surface-container-lowest);
+  --color-surface-container-low: var(--theme-surface-container-low);
+  --color-surface-container: var(--theme-surface-container);
+  --color-surface-container-high: var(--theme-surface-container-high);
+  --color-surface-container-highest: var(--theme-surface-container-highest);
+
+  /* Muted / secondary */
+  --color-muted: var(--theme-muted);
+  --color-muted-foreground: var(--theme-muted-foreground);
+  --color-secondary: var(--theme-secondary);
+  --color-secondary-foreground: var(--theme-secondary-foreground);
+
+  /* Text on surface */
+  --color-on-surface: var(--theme-on-surface);
+  --color-on-surface-variant: var(--theme-on-surface-variant);
+
+  /* Section heading color */
+  --color-section-heading: var(--theme-section-heading);
+
+  /* Borders / outlines */
+  --color-border: var(--theme-border);
+  --color-outline-variant: var(--theme-outline-variant);
+  --color-input: var(--theme-input);
+  --color-ring: var(--theme-ring);
+
+  /* Destructive */
+  --color-destructive: var(--theme-destructive);
+  --color-destructive-foreground: var(--theme-destructive-foreground);
+
+  /* Popover */
+  --color-popover: var(--theme-popover);
+  --color-popover-foreground: var(--theme-popover-foreground);
+
+  /* Sidebar */
+  --color-sidebar-background: var(--theme-sidebar-background);
+  --color-sidebar-foreground: var(--theme-sidebar-foreground);
+  --color-sidebar-primary: var(--theme-sidebar-primary);
+  --color-sidebar-primary-foreground: var(--theme-sidebar-primary-foreground);
+  --color-sidebar-accent: var(--theme-sidebar-accent);
+  --color-sidebar-accent-foreground: var(--theme-sidebar-accent-foreground);
+  --color-sidebar-border: var(--theme-sidebar-border);
+  --color-sidebar-ring: var(--theme-sidebar-ring);
+
+  /* Radius */
+  --radius: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-md: 0.125rem;
+  --radius-sm: 0.5rem;
+
+  /* Shadows */
+  --shadow-glow: var(--theme-shadow-glow);
+  --shadow-card: var(--theme-shadow-card);
+  --shadow-card-hover: var(--theme-shadow-card-hover);
+
+  /* Gradients as custom properties */
+  --gradient-primary: var(--theme-gradient-primary);
+  --gradient-dark: var(--theme-gradient-dark);
+  --gradient-hero: var(--theme-gradient-hero);
+
+  /* ─── Element Design Support ──────────────────────────────── */
+  --color-brand-solid: var(--theme-primary);
+  --color-brand-solid_hover: var(--theme-secondary);
+  --color-brand-secondary: var(--theme-secondary);
+  --color-brand-primary: var(--theme-primary);
+
+  /* Mappings for Button variations */
+  --color-bg-primary: var(--theme-surface-container-low);
+  --color-bg-primary_hover: var(--theme-surface-container);
+  --color-text-secondary: var(--theme-on-surface);
+  --color-text-secondary_hover: var(--theme-primary);
+  --color-text-tertiary: var(--theme-on-surface-variant);
+
+  /* Mapping essential shadows */
+  --shadow-xs-skeuomorphic: 0px 1px 2px rgba(10, 31, 68, 0.05);
+  --shadow-skeuomorphic: 0px 0px 0px 1px rgba(10, 31, 68, 0.18) inset, 0px -2px 0px 0px rgba(10, 31, 68, 0.05) inset;
+}
+
+@layer base {
+  :root {
+    --theme-font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+    --theme-font-heading: "Inter", "Outfit", sans-serif;
+    --theme-font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+    /* Theme Colors: Deep Navy (#0A1F44), Bright Cyan (#00C6FF), Cool Gray (#F2F4F7), Sky Blue (#66BFFF), Charcoal (#333333) */
+    --theme-section-heading: #0A1F44;
+    --theme-primary: #0A1F44;
+    --theme-primary-foreground: #FFFFFF;
+    --theme-accent: #00C6FF;
+    --theme-accent-foreground: #0A1F44;
+
+    --theme-background: #F2F4F7;
+    --theme-foreground: #333333;
+
+    --theme-surface-dark: #E2E7EE;
+    --theme-surface-darker: #D0D8E3;
+    --theme-surface-gray: #E5EBF2;
+    --theme-surface-light: #FFFFFF;
+
+    --theme-card: #FFFFFF;
+    --theme-card-foreground: #333333;
+
+    --theme-surface-container-lowest: #FFFFFF;
+    --theme-surface-container-low: #F8FAFC;
+    --theme-surface-container: #F2F4F7;
+    --theme-surface-container-high: #E2E7EE;
+    --theme-surface-container-highest: #D0D8E3;
+
+    --theme-muted: #E2E7EE;
+    --theme-muted-foreground: #556070;
+    --theme-secondary: #66BFFF;
+    --theme-secondary-foreground: #0A1F44;
+
+    --theme-on-surface: #333333;
+    --theme-on-surface-variant: #556070;
+
+    --theme-border: rgba(10, 31, 68, 0.12);
+    --theme-outline-variant: rgba(10, 31, 68, 0.2);
+    --theme-input: rgba(10, 31, 68, 0.12);
+    --theme-ring: #00C6FF;
+
+    --theme-destructive: #EF4444;
+    --theme-destructive-foreground: #FFFFFF;
+
+    --theme-popover: #FFFFFF;
+    --theme-popover-foreground: #333333;
+
+    --theme-sidebar-background: #F2F4F7;
+    --theme-sidebar-foreground: #556070;
+    --theme-sidebar-primary: #0A1F44;
+    --theme-sidebar-primary-foreground: #FFFFFF;
+    --theme-sidebar-accent: #E2E7EE;
+    --theme-sidebar-accent-foreground: #0A1F44;
+    --theme-sidebar-border: rgba(10, 31, 68, 0.12);
+    --theme-sidebar-ring: #00C6FF;
+
+    --theme-shadow-glow: 0 0 40px rgba(0, 198, 255, 0.2);
+    --theme-shadow-card: 0 12px 30px rgba(10, 31, 68, 0.08);
+    --theme-shadow-card-hover: 0 16px 48px rgba(10, 31, 68, 0.15);
+
+    --theme-gradient-primary: linear-gradient(135deg, #0A1F44 0%, #66BFFF 55%, #00C6FF 100%);
+    --theme-gradient-dark: linear-gradient(135deg, #06132B 0%, #0A1F44 100%);
+    --theme-gradient-hero: radial-gradient(circle at top right, rgba(0,198,255,0.18), transparent 30%), linear-gradient(135deg, #0A1F44 0%, #66BFFF 55%, #00C6FF 100%);
+  }
+
+  .dark {
+    --theme-font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+    --theme-font-heading: "Inter", "Outfit", sans-serif;
+    --theme-font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+    /* Dark Theme Variants */
+    --theme-section-heading: #0A1F44;
+    --theme-primary: #00C6FF;
+    --theme-primary-foreground: #0A1F44;
+    --theme-accent: #66BFFF;
+    --theme-accent-foreground: #FFFFFF;
+
+    --theme-background: #06132B;
+    --theme-foreground: #F2F4F7;
+
+    --theme-surface-dark: #040D1E;
+    --theme-surface-darker: #020710;
+    --theme-surface-gray: #0D2654;
+    --theme-surface-light: #12336E;
+
+    --theme-card: #0A1F44;
+    --theme-card-foreground: #F2F4F7;
+
+    --theme-surface-container-lowest: #020710;
+    --theme-surface-container-low: #040D1E;
+    --theme-surface-container: #06132B;
+    --theme-surface-container-high: #0D2654;
+    --theme-surface-container-highest: #0A1F44;
+
+    --theme-muted: #0D2654;
+    --theme-muted-foreground: #A3B8CC;
+    --theme-secondary: #66BFFF;
+    --theme-secondary-foreground: #0A1F44;
+
+    --theme-on-surface: #F2F4F7;
+    --theme-on-surface-variant: #A3B8CC;
+
+    --theme-border: rgba(0, 198, 255, 0.2);
+    --theme-outline-variant: rgba(0, 198, 255, 0.3);
+    --theme-input: rgba(0, 198, 255, 0.2);
+    --theme-ring: #00C6FF;
+
+    --theme-destructive: #F87171;
+    --theme-destructive-foreground: #FFFFFF;
+
+    --theme-popover: #0A1F44;
+    --theme-popover-foreground: #F2F4F7;
+
+    --theme-sidebar-background: #06132B;
+    --theme-sidebar-foreground: #A3B8CC;
+    --theme-sidebar-primary: #00C6FF;
+    --theme-sidebar-primary-foreground: #0A1F44;
+    --theme-sidebar-accent: #0D2654;
+    --theme-sidebar-accent-foreground: #FFFFFF;
+    --theme-sidebar-border: rgba(0, 198, 255, 0.2);
+    --theme-sidebar-ring: #00C6FF;
+
+    --theme-shadow-glow: 0 0 40px rgba(0, 198, 255, 0.3);
+    --theme-shadow-card: 0 8px 32px rgba(0, 0, 0, 0.4);
+    --theme-shadow-card-hover: 0 16px 48px rgba(0, 0, 0, 0.6);
+
+    --theme-gradient-primary: linear-gradient(135deg, #66BFFF 0%, #00C6FF 100%);
+    --theme-gradient-dark: linear-gradient(135deg, #040D1E 0%, #0D2654 100%);
+    --theme-gradient-hero: radial-gradient(circle at top right, rgba(0,198,255,0.25), transparent 40%), linear-gradient(135deg, #06132B 0%, #0A1F44 55%, #66BFFF 100%);
+  }
+}

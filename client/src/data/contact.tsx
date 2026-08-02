@@ -1,0 +1,36 @@
+import React from 'react';
+import { MessageSquare, Mail, Phone, Clock, Shield, Zap, Users } from 'lucide-react';
+
+export const contacts = [
+  { 
+    title: 'Contact on WhatsApp', 
+    desc: 'Instant support for technical inquiries and academy enrollment assistance.', 
+    action: 'Chat on WhatsApp',
+    href: 'https://wa.me/923120516684',
+    icon: <MessageSquare className="text-primary w-6 h-6" />, 
+    color: 'primary' 
+  },
+  { 
+    title: 'Send an Email', 
+    desc: 'For partnerships, media requests, or custom enterprise solutions.', 
+    action: 'prototechsolution.pk@gmail.com',
+    href: 'mailto:prototechsolution.pk@gmail.com',
+    icon: <Mail className="text-primary w-6 h-6" />, 
+    color: 'primary' 
+  },
+  { 
+    title: 'Give us a Call', 
+    desc: 'Speak directly with our specialized account managers and tech consultants.', 
+    action: '+92 312 0516684',
+    href: 'tel:+923120516684',
+    icon: <Phone className="text-primary w-6 h-6" />, 
+    color: 'primary' 
+  },
+];
+
+export const features = [
+  { icon: <Clock size={18} />, label: '24/7 Global Support' },
+  { icon: <Shield size={18} />, label: 'Secure & Confidential' },
+  { icon: <Zap size={18} />, label: 'Fast Response Time' },
+  { icon: <Users size={18} />, label: 'Dedicated Account Team' },
+];

@@ -1,0 +1,32 @@
+/* ─── Base ────────────────────────────────────────────────────────────── */
+@layer base {
+  *, *::before, *::after {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6, .section-heading, .section-title {
+    font-family: var(--font-heading);
+    color: var(--color-deep-navy, #0A1F44);
+  }
+}
+
+/* ─── Global ──────────────────────────────────────────────────────────── */
+html { 
+  scroll-behavior: smooth; 
+  scrollbar-gutter: stable;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--theme-surface-dark); }
+::-webkit-scrollbar-thumb {
+  background: var(--theme-primary);
+  border-radius: 2px;
+}
