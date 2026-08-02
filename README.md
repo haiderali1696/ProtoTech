@@ -1,2 +1,1 @@
-# TECHNOSPYRE-
-TECHNOSPYRE☣
+ProtoTech
